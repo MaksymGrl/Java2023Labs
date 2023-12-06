@@ -1,0 +1,44 @@
+@startuml
+class Main {
++ {static} void main(String[])
+}
+abstract class Ammunition {
+- String name
+- double cost
+- double weight
++ String getName()
++ double getCost()
++ double getWeight()
++ void setName(String)
++ void setCost(double)
++ void setWeight(double)
+}
+class AmmunitionManager {
+- ArrayList<Ammunition> ammunitionList
++ void addAmmunition(Ammunition)
++ List<Ammunition> getAmmunitionList()
++ double calculateTotalCost()
++ void sortAmmunitionByWeight()
++ ArrayList<Ammunition> findItemsInPriceRange(double,double)
+}
+class Shield {
+- int durability
++ int getDurability()
++ void setDurability(int)
+}
+class Armor {
+- int protectionLevel
++ int getProtectionLevel()
++ void setProtectionLevel(int)
+}
+class Weapon {
+- int damage
++ int getDamage()
++ void setDamage(int)
+}
+
+
+Ammunition <|-- Shield
+Ammunition <|-- Armor
+Ammunition <|-- Weapon
+@enduml
