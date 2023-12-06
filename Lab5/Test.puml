@@ -1,0 +1,32 @@
+@startuml
+class Separator {
+- char character
++ char getCharacter()
++ String toString()
+}
+class Letter {
+- char character
++ char getCharacter()
++ String toString()
+}
+class Main {
++ {static} void main(String[])
+}
+class Text {
+- List<Sentence> sentences
++ List<Sentence> getSentences()
++ String toString()
+}
+class Word {
+- List<Letter> letters
++ List<Letter> getLetters()
++ String toString()
+}
+class Sentence {
+- List<Object> elements
++ List<Object> getElements()
++ String toString()
+}
+
+
+@enduml
